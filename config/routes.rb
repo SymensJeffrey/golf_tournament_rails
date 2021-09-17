@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get "player1s" => "player1s#index"
   get "player2s" => "player2s#index"
+  get "player3s" => "player3s#index"
 end
