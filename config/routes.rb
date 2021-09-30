@@ -4,9 +4,6 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  get "player1s" => "player1s#index"
-  get "player2s" => "player2s#index"
-  get "player3s" => "player3s#index"
-  get "player4s" => "player4s#index"
+ 
 
 end
