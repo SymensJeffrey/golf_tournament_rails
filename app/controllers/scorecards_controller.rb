@@ -50,6 +50,7 @@ class ScorecardsController < ApplicationController
     scorecard.hole7 = params[:hole7] || scorecard.hole7
     scorecard.hole8 = params[:hole8] || scorecard.hole8
     scorecard.hole9 = params[:hole9] || scorecard.hole9
+    scorecard.front_total = scorecard.hole1 + scorecard.hole2 + scorecard.hole3 + scorecard.hole4 + scorecard.hole5 + scorecard.hole6 + scorecard.hole7 + scorecard.hole8 + scorecard.hole9
     scorecard.hole10 = params[:hole10] || scorecard.hole10
     scorecard.hole11 = params[:hole11] || scorecard.hole11
     scorecard.hole12 = params[:hole12] || scorecard.hole12
@@ -59,7 +60,8 @@ class ScorecardsController < ApplicationController
     scorecard.hole16 = params[:hole16] || scorecard.hole16
     scorecard.hole17 = params[:hole17] || scorecard.hole17
     scorecard.hole18 = params[:hole18] || scorecard.hole18
-
+    scorecard.back_total = scorecard.hole10 + scorecard.hole11 + scorecard.hole12 + scorecard.hole13 + scorecard.hole14 + scorecard.hole15 + scorecard.hole16 + scorecard.hole17 + scorecard.hole18
+    scorecard.total_score = scorecard.front_total + scorecard.back_total
     scorecard.save
 
     render json: scorecard
