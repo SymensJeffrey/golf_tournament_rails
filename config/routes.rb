@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   get "/scorecards" => "scorecards#index"
   post "/scorecards" => "scorecards#create"
+  patch "/scorecards/:id" => "scorecards#update"
 
 end
